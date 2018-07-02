@@ -1,0 +1,1423 @@
+        $border-bottom-input: 1px dashed rgba(168, 73, 6, 0.25);
+        $border-bottom-input-focus: 1px solid rgba(77, 38, 38, 0.75);
+        $border-bottom-transition: border-bottom 0.5s ease;
+        $back: #333;
+        $color: #b3c33a;
+        $speed: 1s;
+        .fa {
+            display: inline-block;
+            // font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            // &.fa-inr:before {
+            //     content: "&#8377;";
+            // }
+        }
+        
+        .lyt-interface {
+            // html {
+            //     font-family: courier;
+            // }
+            // #header {
+            //     width: 600px;
+            //     margin: auto;
+            // }
+            display: flow-root;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: auto;
+            margin: auto;
+            .btn {
+                border: 0;
+                border-radius: 3px;
+                padding: 8px 10px;
+                background: #b32832;
+                color: #ffffff;
+                font-weight: 600;
+                font-size: 14px;
+                width: auto;
+                display: block;
+                margin: 30px auto;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                &.typ-anime {
+                    box-shadow: 2px 2px #f5821f;
+                    transition: all 0.2s;
+                    &:hover,
+                    &:active,
+                    &:active:hover {
+                        transform: translate(-2px, -2px);
+                        box-shadow: 4px 4px #f5821f;
+                    }
+                }
+                &.confirm {
+                    float: right;
+                    margin-top: 0;
+                    margin-right: 20px;
+                }
+            }
+            .sec-title {
+                font-size: 20px;
+                color: #004b7c;
+                font-weight: 300;
+                text-align: center;
+                margin: 15px auto;
+                .cm-line-break {
+                    font-size: 26px;
+                    font-weight: 700;
+                    margin-top: 0px;
+                    display: block;
+                    .divider {
+                        width: 30px;
+                        background: #004a7f;
+                        height: 1px;
+                        display: inline-block;
+                        margin: 0 20px;
+                        position: relative;
+                        top: -21px;
+                    }
+                }
+                .arrow {
+                    color: #004a80;
+                    padding-top: 36px;
+                    display: block;
+                    border-color: #004a80;
+                    text-decoration: none;
+                    transition: all .3s ease-out;
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    font-size: 10px;
+                    &:before {
+                        content: '▲';
+                        font-size: 16px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        margin-left: 0;
+                        border: solid 2px #004a80;
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 26px;
+                        border-color: inherit;
+                        transition: transform .5s ease-in;
+                        transform: rotate(-90deg);
+                    }
+                    &:hover {
+                        color: #004a80;
+                        border-color: #004a80;
+                    }
+                    &:hover:before {
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+            .buildPizzaStep {
+                margin: 0 auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                opacity: 0;
+                transition-duration: 1s;
+                visibility: hidden;
+                -webkit-transform: scale(0.8);
+                -moz-transform: scale(0.8);
+                -ms-transform: scale(0.8);
+                -o-transform: scale(0.8);
+                transform: scale(0.8);
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                    -webkit-transform: scale(1);
+                    -moz-transform: scale(1);
+                    -ms-transform: scale(1);
+                    -o-transform: scale(1);
+                    transform: scale(1);
+                }
+            }
+            .pizzacontainer {
+                width: 360px;
+                height: 360px;
+                position: relative;
+                overflow: hidden;
+                background-color: rgba(122, 122, 122, 0.21);
+                margin: 0 auto;
+                &.typ-single {
+                    &.xs {
+                        .pizzapan {
+                            .pizzashadow {
+                                -webkit-transform: scale(0.8);
+                                -moz-transform: scale(0.8);
+                                -ms-transform: scale(0.8);
+                                -o-transform: scale(0.8);
+                                transform: scale(0.8);
+                                -webkit-transition: all 1s;
+                                -moz-transition: all 1s;
+                                -ms-transition: all 1s;
+                                -o-transition: all 1s;
+                                transition: all 1s;
+                            }
+                        }
+                    }
+                    &.md {
+                        .pizzapan {
+                            .pizzashadow {
+                                -webkit-transform: scale(0.9);
+                                -moz-transform: scale(0.9);
+                                -ms-transform: scale(0.9);
+                                -o-transform: scale(0.9);
+                                transform: scale(0.9);
+                                -webkit-transition: all 1s;
+                                -moz-transition: all 1s;
+                                -ms-transition: all 1s;
+                                -o-transition: all 1s;
+                                transition: all 1s;
+                            }
+                        }
+                    }
+                    &.lg {
+                        .pizzapan {
+                            .pizzashadow {
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                -webkit-transition: all 1s;
+                                -moz-transition: all 1s;
+                                -ms-transition: all 1s;
+                                -o-transition: all 1s;
+                                transition: all 1s;
+                            }
+                        }
+                    }
+                    &.crust-tn {
+                        .pizzapan {
+                            .pizzashadow {
+                                -webkit-box-shadow: 1px 1px 29px 0px rgba(0, 0, 0, 0.45);
+                                box-shadow: 1px 1px 29px 0px rgba(0, 0, 0, 0.45);
+                                .pizza {
+                                    .tomatosauce {
+                                        background-color: #b31212;
+                                        -webkit-transition: all 1s;
+                                        -moz-transition: all 1s;
+                                        -ms-transition: all 1s;
+                                        -o-transition: all 1s;
+                                        transition: all 1s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.crust-ch {
+                        .pizzapan {
+                            .pizzashadow {
+                                -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+                                box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+                                .pizza {
+                                    .tomatosauce {
+                                        background-color: #fdf1c0;
+                                        -webkit-transition: all 1s;
+                                        -moz-transition: all 1s;
+                                        -ms-transition: all 1s;
+                                        -o-transition: all 1s;
+                                        transition: all 1s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.crust-ch-tn {
+                        .pizzapan {
+                            .pizzashadow {
+                                -webkit-box-shadow: 1px 1px 29px 0px rgba(0, 0, 0, 0.45);
+                                box-shadow: 1px 1px 29px 0px rgba(0, 0, 0, 0.45);
+                                .pizza {
+                                    .tomatosauce {
+                                        background-color: #fdf1c0;
+                                        -webkit-transition: all 1s;
+                                        -moz-transition: all 1s;
+                                        -ms-transition: all 1s;
+                                        -o-transition: all 1s;
+                                        transition: all 1s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.crust-nm {
+                        .pizzapan {
+                            .pizzashadow {
+                                -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+                                box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+                                .pizza {
+                                    .tomatosauce {
+                                        background-color: #b31212;
+                                        -webkit-transition: all 1s;
+                                        -moz-transition: all 1s;
+                                        -ms-transition: all 1s;
+                                        -o-transition: all 1s;
+                                        transition: all 1s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .panhandle {
+                    width: 50px;
+                    height: 190px;
+                    position: absolute;
+                    top: -31px;
+                    left: 275px;
+                    background-color: #aa4a05;
+                    transform: rotate(45deg);
+                }
+                .pizzapan {
+                    width: 280px;
+                    height: 280px;
+                    background-color: #aa4a05;
+                    border-radius: 65px;
+                    position: absolute;
+                    box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.55);
+                    -webkit-box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.55);
+                    top: 40px;
+                    left: 40px;
+                    transform: rotate(45deg);
+                    .pizzashadow {
+                        width: 260px;
+                        height: 260px;
+                        border-radius: 100%;
+                        position: relative;
+                        top: 10px;
+                        left: 10px;
+                        -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+                        box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+                        .pizza {
+                            width: 260px;
+                            height: 260px;
+                            border-radius: 100%;
+                            background-color: #f6e6a1;
+                            position: absolute;
+                            .tomatosauce {
+                                width: 240px;
+                                height: 240px;
+                                border-radius: 100%;
+                                background-color: #b31212;
+                                position: absolute;
+                                border-style: wave;
+                                top: 10px;
+                                left: 10px;
+                                .cheese {
+                                    width: 220px;
+                                    height: 220px;
+                                    border-radius: 100%;
+                                    background-color: #e0dfce;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.typ-sm {
+                    width: 140px;
+                    height: 140px;
+                    float: left;
+                    border-radius: 3px;
+                    background: transparent;
+                    .panhandle {
+                        width: 12px;
+                        height: 45px;
+                        top: -2px;
+                        left: 116px;
+                        border-radius: 5px;
+                    }
+                    .pizzapan {
+                        width: 115px;
+                        height: 115px;
+                        background-color: #aa4a05;
+                        border-radius: 15px;
+                        position: absolute;
+                        box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.55);
+                        -webkit-box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.55);
+                        top: 12px;
+                        left: 14px;
+                        transform: rotate(90deg);
+                        .pizzashadow {
+                            width: 105px;
+                            height: 105px;
+                            -webkit-box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.35);
+                            box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.35);
+                            top: 5px;
+                            left: 5px;
+                            .pizza {
+                                width: 105px;
+                                height: 105px;
+                                .tomatosauce {
+                                    width: 95px;
+                                    height: 95px;
+                                    top: 5px;
+                                    left: 5px;
+                                    .cheese {
+                                        width: 85px;
+                                        height: 85px;
+                                        top: 5px;
+                                        left: 5px;
+                                        /* PEPPERONI *********************************************************/
+                                        .pepperoni-holder {
+                                            width: 80px;
+                                            height: 80px;
+                                            top: 5px;
+                                            left: 5px;
+                                            .pepperoni {
+                                                width: 6px;
+                                                height: 6px;
+                                                &.p1 {
+                                                    top: 8px;
+                                                    left: 50px;
+                                                }
+                                                &.p2 {
+                                                    top: 54px;
+                                                    left: 30px;
+                                                }
+                                                &.p3 {
+                                                    top: 40px;
+                                                    left: 50px;
+                                                }
+                                                &.p4 {
+                                                    top: 20px;
+                                                    left: 10px;
+                                                }
+                                                &.p5 {
+                                                    top: 0;
+                                                    left: 30px;
+                                                }
+                                                &.p6 {
+                                                    top: 50px;
+                                                    left: 0px;
+                                                }
+                                                &.p7 {
+                                                    top: 30px;
+                                                    left: 70px;
+                                                }
+                                            }
+                                        }
+                                        /* SAUSAGE *************************************************************/
+                                        .sausage-holder {
+                                            width: 80px;
+                                            height: 80px;
+                                            top: 5px;
+                                            left: 5px;
+                                            .sausage {
+                                                width: 5px;
+                                                height: 8px;
+                                                border-radius: 40% 75% 75% 100%;
+                                                &.s1 {
+                                                    top: 20px;
+                                                    left: 30px;
+                                                }
+                                                &.s2 {
+                                                    top: 40px;
+                                                    left: 10px;
+                                                    transform: rotate(270deg);
+                                                }
+                                                &.s3 {
+                                                    top: 60px;
+                                                    left: 40px;
+                                                    transform: rotate(90deg);
+                                                }
+                                                &.s4 {
+                                                    top: 3px;
+                                                    left: 15px;
+                                                    transform: rotate(110deg);
+                                                }
+                                                &.s5 {
+                                                    top: 25px;
+                                                    left: 60px;
+                                                    transform: rotate(200deg);
+                                                }
+                                                &.s6 {
+                                                    top: -2px;
+                                                    left: 45px;
+                                                }
+                                                &.s7 {
+                                                    top: 62px;
+                                                    left: 12px;
+                                                }
+                                                &.s8 {
+                                                    top: 30px;
+                                                    left: 0;
+                                                }
+                                                &.s10 {
+                                                    top: 50px;
+                                                    left: 50px;
+                                                }
+                                            }
+                                        }
+                                        /* MUSHROOM ***********************************************************/
+                                        .mushroom-holder {
+                                            width: 80px;
+                                            height: 80px;
+                                            .mushroom {
+                                                width: 10px;
+                                                height: 6px;
+                                                border-radius: 70% 70% 0% 0%;
+                                                &.m1 {
+                                                    top: 20px;
+                                                    left: 140px;
+                                                }
+                                                &.m2 {
+                                                    top: 50px;
+                                                    left: 10px;
+                                                    transform: rotate(270deg);
+                                                }
+                                                &.m3 {
+                                                    top: 50px;
+                                                    left: 50px;
+                                                    transform: rotate(90deg);
+                                                }
+                                                &.m4 {
+                                                    top: 25px;
+                                                    left: 10px;
+                                                    transform: rotate(110deg);
+                                                }
+                                                &.m5 {
+                                                    top: 40px;
+                                                    left: 60px;
+                                                    transform: rotate(200deg);
+                                                }
+                                                &.m6 {
+                                                    top: 15px;
+                                                    left: 33px;
+                                                }
+                                                &.m7 {
+                                                    top: 5px;
+                                                    left: 20px;
+                                                }
+                                                &.m8 {
+                                                    top: 64px;
+                                                    left: 28px;
+                                                }
+                                                &.m10 {
+                                                    top: 4px;
+                                                    left: 54px;
+                                                }
+                                            }
+                                        }
+                                        /* OLIVES ***********************************************************/
+                                        .olive-holder {
+                                            width: 80px;
+                                            height: 80px;
+                                            top: 10px;
+                                            left: 10px;
+                                            .olive {
+                                                width: 4px;
+                                                height: 8px;
+                                                &.o1 {
+                                                    top: 12px;
+                                                    left: 15px;
+                                                }
+                                                &.o2 {
+                                                    top: 22px;
+                                                    left: 40px;
+                                                }
+                                                &.o3 {
+                                                    top: 60px;
+                                                    left: 50px;
+                                                }
+                                                &.o4 {
+                                                    top: 15px;
+                                                    left: 65px;
+                                                }
+                                                &.o5 {
+                                                    top: 25px;
+                                                    left: 5px;
+                                                }
+                                                &.o6 {
+                                                    top: 60px;
+                                                    left: 15px;
+                                                }
+                                                &.o7 {
+                                                    top: 35px;
+                                                    left: 52px;
+                                                }
+                                                &.o8 {
+                                                    top: 35px;
+                                                    left: 15px;
+                                                }
+                                                &.o9 {
+                                                    top: 26px;
+                                                    left: 25px;
+                                                }
+                                                &.o10 {
+                                                    top: -4px;
+                                                    left: 50px;
+                                                }
+                                            }
+                                        }
+                                        /* BELL PEPPER ***********************************************************/
+                                        .pepper-holder {
+                                            width: 80px;
+                                            height: 80px;
+                                            top: 20px;
+                                            left: 20px;
+                                            .pepper {
+                                                width: 2px;
+                                                height: 8px;
+                                                &.pe1 {
+                                                    top: 20px;
+                                                    left: 25px;
+                                                }
+                                                &.pe2 {
+                                                    top: 0;
+                                                    left: 50px;
+                                                }
+                                                &.pe3 {
+                                                    top: 5px;
+                                                    left: -15px;
+                                                }
+                                                &.pe4 {
+                                                    top: 25px;
+                                                    left: 15px;
+                                                }
+                                                &.pe5 {
+                                                    top: -6px;
+                                                    left: 25px;
+                                                }
+                                                &.pe6 {
+                                                    top: 50px;
+                                                    left: 15px;
+                                                }
+                                                &.pe7 {
+                                                    top: 35px;
+                                                    left: 0px;
+                                                }
+                                                &.pe8 {
+                                                    top: -4px;
+                                                    left: 0px;
+                                                }
+                                                &.pe9 {
+                                                    top: 40px;
+                                                    left: 54px;
+                                                }
+                                                &.pe10 {
+                                                    top: 54px;
+                                                    left: 30px;
+                                                }
+                                                &.pe11 {
+                                                    top: 20px;
+                                                    left: 50px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pizza-desc {
+                float: left;
+                padding: 0 10px;
+                margin-top: 15px;
+                box-sizing: border-box;
+                width: calc(100% - 140px);
+                .pizza-name {
+                    font-size: 16px;
+                    color: #444;
+                    font-weight: 600;
+                    margin-bottom: 6px;
+                }
+                .ingredients {
+                    font-size: 12px;
+                    color: #777;
+                    font-weight: 500;
+                    margin: 6px 0;
+                    display: block;
+                    line-height: 15px;
+                }
+                .price {
+                    font-size: 14px;
+                    color: #b32832;
+                    font-weight: 600;
+                    margin: 10px 0;
+                }
+            }
+            .spin {
+                animation: spin linear infinite 3s;
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .deactive {
+                opacity: 0;
+                visibility: hidden;
+            }
+            .pizza-list {
+                padding: 0 15px;
+                >li {
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    margin-bottom: 10px;
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                    // background: #eee;
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        visibility: hidden;
+                        &:not(old):checked+label .icon-checkbox {
+                            border: 1px solid #004b7b;
+                            color: #004b7b;
+                            font-size: 12px;
+                            background: #004b7b;
+                            &:after {
+                                content: '\2713';
+                                color: #fff;
+                                position: absolute;
+                                font-size: 12px;
+                                left: 3px;
+                                top: 1px;
+                            }
+                        }
+                    }
+                    .form-label {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        // border: 1px solid #004a80;
+                        -webkit-box-shadow: 0px 0px 10px -2px #c2c2c2;
+                        -moz-box-shadow: 0px 0px 10px -2px #c2c2c2;
+                        box-shadow: 0px 0px 10px -2px #c2c2c2;
+                        .icon-checkbox {
+                            height: 16px;
+                            width: 16px;
+                            background-color: #fff;
+                            border: 1px solid #004b7b;
+                            border-radius: 2px;
+                            position: absolute;
+                            top: 50%;
+                            right: -8px;
+                            width: 16px;
+                            height: 16px;
+                            padding: 0;
+                            transform: translateY(-50%);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            /* PEPPERONI *********************************************************/
+            .pepperoni-holder {
+                width: 220px;
+                height: 220px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                .pepperoni {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 100%;
+                    background-color: rgb(179, 18, 18);
+                    position: absolute;
+                    display: block;
+                    &.p1 {
+                        top: 80px;
+                        left: 150px;
+                    }
+                    &.p2 {
+                        top: 140px;
+                        left: 30px;
+                    }
+                    &.p3 {
+                        top: 100px;
+                        left: 70px;
+                    }
+                    &.p4 {
+                        top: 20px;
+                        left: 10px;
+                    }
+                    &.p5 {
+                        top: 0px;
+                        left: 120px;
+                    }
+                    &.p6 {
+                        top: 50px;
+                        left: 100px;
+                    }
+                    &.p7 {
+                        top: 160px;
+                        left: 120px;
+                    }
+                }
+            }
+            /* SAUSAGE *************************************************************/
+            .sausage-holder {
+                width: 220px;
+                height: 220px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                .sausage {
+                    width: 10px;
+                    height: 15px;
+                    border-radius: 40% 75% 75% 100%;
+                    background-color: #934906;
+                    position: absolute;
+                    display: block;
+                    &.s1 {
+                        top: 170px;
+                        left: 70px;
+                    }
+                    &.s2 {
+                        top: 40px;
+                        left: 160px;
+                        transform: rotate(270deg);
+                    }
+                    &.s3 {
+                        top: 100px;
+                        left: 40px;
+                        transform: rotate(90deg);
+                    }
+                    &.s4 {
+                        top: 75px;
+                        left: 105px;
+                        transform: rotate(110deg);
+                    }
+                    &.s5 {
+                        top: -15px;
+                        left: 85px;
+                        transform: rotate(200deg);
+                    }
+                    &.s6 {
+                        top: 70px;
+                        left: 65px;
+                        transform: rotate(70deg);
+                    }
+                    &.s7 {
+                        top: 105px;
+                        left: 160px;
+                    }
+                    &.s8 {
+                        top: 90px;
+                        left: 0;
+                    }
+                    &.s9 {
+                        top: 20px;
+                        left: 50px;
+                    }
+                    &.s10 {
+                        top: 130px;
+                        left: 90px;
+                    }
+                }
+            }
+            /* MUSHROOM ***********************************************************/
+            .mushroom-holder {
+                width: 210px;
+                height: 210px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                .mushroom {
+                    width: 15px;
+                    height: 10px;
+                    border-radius: 100% 100% 0% 0%;
+                    background-color: rgb(189, 129, 28);
+                    position: absolute;
+                    display: block;
+                    &.m1 {
+                        top: 20px;
+                        left: 140px;
+                    }
+                    &.m2 {
+                        top: 70px;
+                        left: 190px;
+                        transform: rotate(270deg);
+                    }
+                    &.m3 {
+                        top: 150px;
+                        left: 60px;
+                        transform: rotate(90deg);
+                    }
+                    &.m4 {
+                        top: 20px;
+                        left: 80px;
+                        transform: rotate(110deg);
+                    }
+                    &.m5 {
+                        top: 140px;
+                        left: 160px;
+                        transform: rotate(200deg);
+                    }
+                    &.m6 {
+                        top: 175px;
+                        left: 150px;
+                        transform: rotate(70deg);
+                    }
+                    &.m7 {
+                        top: 140px;
+                        left: 105px;
+                    }
+                    &.m8 {
+                        top: 120px;
+                        left: 30px;
+                    }
+                    &.m9 {
+                        top: 40px;
+                        left: 30px;
+                    }
+                    &.m10 {
+                        top: 200px;
+                        left: 100px;
+                    }
+                }
+            }
+            /* OLIVES ***********************************************************/
+            .olive-holder {
+                width: 210px;
+                height: 210px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                .olive {
+                    width: 8px;
+                    height: 14px;
+                    border-radius: 100%;
+                    background-color: rgb(0, 0, 0);
+                    position: absolute;
+                    display: block;
+                    &.o1 {
+                        top: 0;
+                        left: 100px;
+                    }
+                    &.o2 {
+                        top: 70px;
+                        left: 190px;
+                        transform: rotate(270deg);
+                    }
+                    &.o3 {
+                        top: 160px;
+                        left: 90px;
+                        transform: rotate(90deg);
+                    }
+                    &.o4 {
+                        top: 50px;
+                        left: 80px;
+                        transform: rotate(110deg);
+                    }
+                    &.o5 {
+                        top: 140px;
+                        left: 140px;
+                        transform: rotate(200deg);
+                    }
+                    &.o6 {
+                        top: 115px;
+                        left: 180px;
+                        transform: rotate(70deg);
+                    }
+                    &.o7 {
+                        top: 40px;
+                        left: 45px;
+                    }
+                    &.o8 {
+                        top: 150px;
+                        left: 10px;
+                    }
+                    &.o9 {
+                        top: 100px;
+                        left: 100px;
+                    }
+                    &.o10 {
+                        top: 110px;
+                        left: 50px;
+                    }
+                    &.o11 {
+                        top: 0;
+                        left: 30px;
+                    }
+                }
+            }
+            /* BELL PEPPER ***********************************************************/
+            .pepper-holder {
+                width: 210px;
+                height: 210px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                .pepper {
+                    width: 4px;
+                    height: 15px;
+                    border-radius: 100%;
+                    background-color: rgb(18, 190, 61);
+                    position: absolute;
+                    display: block;
+                    &.pe1 {
+                        top: 20px;
+                        left: 165px;
+                    }
+                    &.pe2 {
+                        top: 70px;
+                        left: 170px;
+                        transform: rotate(270deg);
+                    }
+                    &.pe3 {
+                        top: 165px;
+                        left: 45px;
+                        transform: rotate(90deg);
+                    }
+                    &.pe4 {
+                        top: 25px;
+                        left: 80px;
+                        transform: rotate(110deg);
+                    }
+                    &.pe5 {
+                        top: 100px;
+                        left: 130px;
+                        transform: rotate(200deg);
+                    }
+                    &.pe6 {
+                        top: 100px;
+                        left: 180px;
+                        transform: rotate(70deg);
+                    }
+                    &.pe7 {
+                        top: 35px;
+                        left: 0px;
+                    }
+                    &.pe8 {
+                        top: 110px;
+                        left: 0px;
+                    }
+                    &.pe9 {
+                        top: 40px;
+                        left: 125px;
+                        transform: rotate(70deg);
+                    }
+                    &.pe10 {
+                        top: 60px;
+                        left: 30px;
+                        transform: rotate(170deg);
+                    }
+                    &.pe11 {
+                        top: 80px;
+                        left: 85px;
+                        transform: rotate(220deg);
+                    }
+                }
+            }
+            /* CORN ***********************************************************/
+            .corn-holder {
+                width: 180px;
+                height: 180px;
+                position: absolute;
+                top: 16px;
+                left: 30px;
+                transform: rotate(-95deg);
+                .corn {
+                    width: 4px;
+                    height: 15px;
+                    border-radius: 100%;
+                    background-color: rgba(255, 255, 0, 0.78);
+                    position: absolute;
+                    display: block;
+                    &.cr1 {
+                        top: 20px;
+                        left: 165px;
+                    }
+                    &.cr2 {
+                        top: 70px;
+                        left: 170px;
+                        transform: rotate(270deg);
+                    }
+                    &.cr3 {
+                        top: 165px;
+                        left: 45px;
+                        transform: rotate(90deg);
+                    }
+                    &.cr4 {
+                        top: 25px;
+                        left: 80px;
+                        transform: rotate(110deg);
+                    }
+                    &.cr5 {
+                        top: 100px;
+                        left: 130px;
+                        transform: rotate(200deg);
+                    }
+                    &.cr6 {
+                        top: 100px;
+                        left: 180px;
+                        transform: rotate(70deg);
+                    }
+                    &.cr7 {
+                        top: 35px;
+                        left: 0px;
+                    }
+                    &.cr8 {
+                        top: 110px;
+                        left: 0px;
+                    }
+                    &.cr9 {
+                        top: 40px;
+                        left: 125px;
+                        transform: rotate(70deg);
+                    }
+                    &.cr10 {
+                        top: 60px;
+                        left: 30px;
+                        transform: rotate(170deg);
+                    }
+                    &.cr11 {
+                        top: 80px;
+                        left: 85px;
+                        transform: rotate(220deg);
+                    }
+                }
+            }
+            /* carrot ***********************************************************/
+            .carrot-holder {
+                width: 210px;
+                height: 210px;
+                position: absolute;
+                top: 0px;
+                left: -10px;
+                transform: rotate(-190deg);
+                .carrot {
+                    width: 4px;
+                    height: 20px;
+                    border-radius: 100%;
+                    background-color: rgb(235, 137, 33);
+                    position: absolute;
+                    display: block;
+                    &.ca1 {
+                        top: 0;
+                        left: 100px;
+                    }
+                    &.ca2 {
+                        top: 70px;
+                        left: 190px;
+                        transform: rotate(270deg);
+                    }
+                    &.ca3 {
+                        top: 160px;
+                        left: 90px;
+                        transform: rotate(90deg);
+                    }
+                    &.ca4 {
+                        top: 50px;
+                        left: 80px;
+                        transform: rotate(110deg);
+                    }
+                    &.ca5 {
+                        top: 140px;
+                        left: 140px;
+                        transform: rotate(200deg);
+                    }
+                    &.ca6 {
+                        top: 115px;
+                        left: 180px;
+                        transform: rotate(70deg);
+                    }
+                    &.ca7 {
+                        top: 40px;
+                        left: 45px;
+                    }
+                    &.ca8 {
+                        top: 150px;
+                        left: 10px;
+                    }
+                    &.ca9 {
+                        top: 100px;
+                        left: 100px;
+                    }
+                    &.ca10 {
+                        top: 110px;
+                        left: 50px;
+                    }
+                    &.ca11 {
+                        top: 0;
+                        left: 30px;
+                    }
+                }
+            }
+            /* capsicum ***********************************************************/
+            .capsicum-holder {
+                width: 210px;
+                height: 210px;
+                position: absolute;
+                top: -15px;
+                left: -4px;
+                transform: rotate(67deg);
+                .capsicum {
+                    width: 15px;
+                    height: 10px;
+                    border-radius: 100% 100% 0% 0%;
+                    background-color: rgb(40, 132, 63);
+                    position: absolute;
+                    display: block;
+                    &.cm1 {
+                        top: 20px;
+                        left: 140px;
+                    }
+                    &.cm2 {
+                        top: 70px;
+                        left: 190px;
+                        transform: rotate(270deg);
+                    }
+                    &.cm3 {
+                        top: 150px;
+                        left: 60px;
+                        transform: rotate(90deg);
+                    }
+                    &.cm4 {
+                        top: 20px;
+                        left: 80px;
+                        transform: rotate(110deg);
+                    }
+                    &.cm5 {
+                        top: 140px;
+                        left: 160px;
+                        transform: rotate(200deg);
+                    }
+                    &.cm6 {
+                        top: 175px;
+                        left: 150px;
+                        transform: rotate(70deg);
+                    }
+                    &.cm7 {
+                        top: 140px;
+                        left: 105px;
+                    }
+                }
+            }
+            /* paneer *********************************************************/
+            .paneer-holder {
+                width: 220px;
+                height: 220px;
+                position: absolute;
+                top: 20px;
+                left: -28px;
+                transform: rotate(80deg);
+                .paneer {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 4px;
+                    background-color: rgb(255, 252, 228);
+                    position: absolute;
+                    display: block;
+                    &.pr1 {
+                        top: 80px;
+                        left: 150px;
+                    }
+                    &.pr2 {
+                        top: 140px;
+                        left: 30px;
+                    }
+                    &.pr3 {
+                        top: 100px;
+                        left: 70px;
+                    }
+                    &.pr4 {
+                        top: 20px;
+                        left: 10px;
+                    }
+                    &.pr5 {
+                        top: 0px;
+                        left: 120px;
+                    }
+                    &.pr6 {
+                        top: 50px;
+                        left: 100px;
+                    }
+                    &.pr7 {
+                        top: 160px;
+                        left: 120px;
+                    }
+                }
+            }
+            /*INTERFACE ***************************************************************/
+            .toggleui {
+                width: 260px;
+                height: auto;
+                display: inline-flex;
+                flex-direction: column;
+                margin-top: 30px;
+            }
+            .card-container {
+                perspective: 100;
+            }
+            .card {
+                width: 100%;
+                height: 60px;
+                display: block;
+                margin: 10px;
+                position: relative;
+                box-shadow: 0px 7px 15px 0px rgba(84, 84, 84, 0.78);
+                color: #004a80;
+                text-align: center;
+                line-height: 30px;
+                transform-style: preserve-3d;
+                transition: 1.0s ease;
+            }
+            .card h1 {
+                font-size: 1.6em;
+            }
+            .front,
+            .back {
+                background-color: rgb(84, 114, 84);
+                width: 100%;
+                height: 60px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                backface-visibility: hidden;
+            }
+            .back {
+                transform: rotateY(180deg);
+                background-color: rgb(165, 42, 42);
+                opacity: 0.6;
+            }
+            .flip {
+                transform: rotateY(180deg);
+            }
+            .radio-group,
+            .chkbox-group,
+            .listing-group {
+                margin: 0 auto;
+                width: 360px;
+                clear: both;
+                padding: 0 20px;
+                box-sizing: border-box;
+                .radio-label,
+                .chkbox-label,
+                .list-item {
+                    position: relative;
+                    display: inline-block;
+                    margin: 10px;
+                    width: 100%;
+                    @media (max-width: 48em) {
+                        display: block;
+                        margin: 15px 0;
+                    }
+                    input {
+                        opacity: 0;
+                        position: absolute;
+                    }
+                    .inner-label {
+                        position: relative;
+                        display: inline-block;
+                        padding-left: 40px;
+                        color: #004b7b;
+                        font-size: 13px;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            border-bottom: $border-bottom-input;
+                            width: 30px;
+                            transition: $border-bottom-transition;
+                        }
+                    }
+                    .amount {
+                        float: right;
+                        color: #555;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                    input:focus~.inner-label {
+                        &:before {
+                            border-bottom: $border-bottom-input-focus;
+                        }
+                    }
+                    input:checked~.inner-label {
+                        &:after {
+                            content: '\2713';
+                            color: #aa4a05;
+                            position: absolute;
+                            font-size: 12px;
+                            left: 12px;
+                            top: 1px;
+                        }
+                        &+.amount {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            .listing-group {
+                margin: 20px auto;
+                width: 250px;
+                clear: both;
+                padding: 0 20px;
+                float: right;
+                .list-item {
+                    position: relative;
+                    display: inline-block;
+                    padding-left: 0;
+                    color: #004b7b;
+                    font-size: 14px;
+                    margin: 6px 0;
+                    .lst-txt {
+                        color: #004b7b;
+                        font-size: 13px;
+                        width: 100px;
+                        text-align: right;
+                        display: inline-block;
+                    }
+                    .amt {
+                        color: #b31212;
+                        width: 85px;
+                        display: inline-block;
+                        font-size: 12px;
+                        text-align: right;
+                    }
+                    &.last {
+                        border-top: 1px solid #ddd;
+                        padding-top: 15px;
+                        .lst-txt {
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                        .amt {
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            .deli-img {
+                background: transparent url("../img/courier.svg") no-repeat 0 0;
+                height: 150px;
+                width: 150px;
+                display: block;
+                margin: 60px auto 0;
+            }
+            .msg {
+                color: #555;
+                font-size: 28px;
+                text-align: center;
+                line-height: 36px;
+                padding: 0 20px;
+                margin-top: 60px;
+            }
+        }

@@ -1,0 +1,1371 @@
+@charset "UTF-8";
+/*
+  @Author : Payal Butala
+  @Project : Pizza App
+  @Dev : Payal
+  @Date :28rd June 2018
+*/
+/* config */
+/* Variables.scss */
+/* colors */
+/* Font Weight */
+/* breakpoints */
+/* element */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* element.scss */
+body {
+  background: #ffffff;
+  font-size: 15px;
+  color: #b4b4b4;
+  font-family: sans-serif;
+  font-weight: 400; }
+
+p {
+  line-height: 20px;
+  margin-bottom: 15px;
+  font-size: 12px; }
+  p:last-child {
+    margin-bottom: 0; }
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: #b4b4b4;
+  text-decoration: none;
+  outline: none !important; }
+
+button:focus, button:active {
+  outline: none !important; }
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  left: -99999px;
+  position: absolute;
+  top: -99999px; }
+
+/* layout */
+.fa {
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.lyt-interface {
+  display: flow-root;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  margin: auto;
+  /* PEPPERONI *********************************************************/
+  /* SAUSAGE *************************************************************/
+  /* MUSHROOM ***********************************************************/
+  /* OLIVES ***********************************************************/
+  /* BELL PEPPER ***********************************************************/
+  /* CORN ***********************************************************/
+  /* carrot ***********************************************************/
+  /* capsicum ***********************************************************/
+  /* paneer *********************************************************/
+  /*INTERFACE ***************************************************************/ }
+  .lyt-interface .btn {
+    border: 0;
+    border-radius: 3px;
+    padding: 8px 10px;
+    background: #b32832;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    width: auto;
+    display: block;
+    margin: 30px auto;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+    .lyt-interface .btn.typ-anime {
+      box-shadow: 2px 2px #f5821f;
+      transition: all 0.2s; }
+      .lyt-interface .btn.typ-anime:hover, .lyt-interface .btn.typ-anime:active, .lyt-interface .btn.typ-anime:active:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px #f5821f; }
+    .lyt-interface .btn.confirm {
+      float: right;
+      margin-top: 0;
+      margin-right: 20px; }
+  .lyt-interface .sec-title {
+    font-size: 20px;
+    color: #004b7c;
+    font-weight: 300;
+    text-align: center;
+    margin: 15px auto; }
+    .lyt-interface .sec-title .cm-line-break {
+      font-size: 26px;
+      font-weight: 700;
+      margin-top: 0px;
+      display: block; }
+      .lyt-interface .sec-title .cm-line-break .divider {
+        width: 30px;
+        background: #004a7f;
+        height: 1px;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+        top: -21px; }
+    .lyt-interface .sec-title .arrow {
+      color: #004a80;
+      padding-top: 36px;
+      display: block;
+      border-color: #004a80;
+      text-decoration: none;
+      transition: all .3s ease-out;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 10px; }
+      .lyt-interface .sec-title .arrow:before {
+        content: '▲';
+        font-size: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 0;
+        border: solid 2px #004a80;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 26px;
+        border-color: inherit;
+        transition: transform .5s ease-in;
+        transform: rotate(-90deg); }
+      .lyt-interface .sec-title .arrow:hover {
+        color: #004a80;
+        border-color: #004a80; }
+      .lyt-interface .sec-title .arrow:hover:before {
+        transform: rotate(270deg); }
+  .lyt-interface .buildPizzaStep {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    opacity: 0;
+    transition-duration: 1s;
+    visibility: hidden;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8); }
+    .lyt-interface .buildPizzaStep.active {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+  .lyt-interface .pizzacontainer {
+    width: 360px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(122, 122, 122, 0.21);
+    margin: 0 auto; }
+    .lyt-interface .pizzacontainer.typ-single.xs .pizzapan .pizzashadow {
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      transform: scale(0.8);
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
+    .lyt-interface .pizzacontainer.typ-single.md .pizzapan .pizzashadow {
+      -webkit-transform: scale(0.9);
+      -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      -o-transform: scale(0.9);
+      transform: scale(0.9);
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
+    .lyt-interface .pizzacontainer.typ-single.lg .pizzapan .pizzashadow {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
+    .lyt-interface .pizzacontainer.typ-single.crust-tn .pizzapan .pizzashadow {
+      -webkit-box-shadow: 1px 1px 29px 0px rgba(0, 0, 0, 0.45);
+      box-shadow: 1px 1px 29px 0px rgba(0, 0, 0, 0.45); }
+      .lyt-interface .pizzacontainer.typ-single.crust-tn .pizzapan .pizzashadow .pizza .tomatosauce {
+        background-color: #b31212;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+    .lyt-interface .pizzacontainer.typ-single.crust-ch .pizzapan .pizzashadow {
+      -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+      box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45); }
+      .lyt-interface .pizzacontainer.typ-single.crust-ch .pizzapan .pizzashadow .pizza .tomatosauce {
+        background-color: #fdf1c0;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+    .lyt-interface .pizzacontainer.typ-single.crust-ch-tn .pizzapan .pizzashadow {
+      -webkit-box-shadow: 1px 1px 29px 0px rgba(0, 0, 0, 0.45);
+      box-shadow: 1px 1px 29px 0px rgba(0, 0, 0, 0.45); }
+      .lyt-interface .pizzacontainer.typ-single.crust-ch-tn .pizzapan .pizzashadow .pizza .tomatosauce {
+        background-color: #fdf1c0;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+    .lyt-interface .pizzacontainer.typ-single.crust-nm .pizzapan .pizzashadow {
+      -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+      box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45); }
+      .lyt-interface .pizzacontainer.typ-single.crust-nm .pizzapan .pizzashadow .pizza .tomatosauce {
+        background-color: #b31212;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+    .lyt-interface .pizzacontainer .panhandle {
+      width: 50px;
+      height: 190px;
+      position: absolute;
+      top: -31px;
+      left: 275px;
+      background-color: #aa4a05;
+      transform: rotate(45deg); }
+    .lyt-interface .pizzacontainer .pizzapan {
+      width: 280px;
+      height: 280px;
+      background-color: #aa4a05;
+      border-radius: 65px;
+      position: absolute;
+      box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.55);
+      -webkit-box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.55);
+      top: 40px;
+      left: 40px;
+      transform: rotate(45deg); }
+      .lyt-interface .pizzacontainer .pizzapan .pizzashadow {
+        width: 260px;
+        height: 260px;
+        border-radius: 100%;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.45); }
+        .lyt-interface .pizzacontainer .pizzapan .pizzashadow .pizza {
+          width: 260px;
+          height: 260px;
+          border-radius: 100%;
+          background-color: #f6e6a1;
+          position: absolute; }
+          .lyt-interface .pizzacontainer .pizzapan .pizzashadow .pizza .tomatosauce {
+            width: 240px;
+            height: 240px;
+            border-radius: 100%;
+            background-color: #b31212;
+            position: absolute;
+            border-style: wave;
+            top: 10px;
+            left: 10px; }
+            .lyt-interface .pizzacontainer .pizzapan .pizzashadow .pizza .tomatosauce .cheese {
+              width: 220px;
+              height: 220px;
+              border-radius: 100%;
+              background-color: #e0dfce;
+              position: absolute;
+              top: 10px;
+              left: 10px; }
+    .lyt-interface .pizzacontainer.typ-sm {
+      width: 140px;
+      height: 140px;
+      float: left;
+      border-radius: 3px;
+      background: transparent; }
+      .lyt-interface .pizzacontainer.typ-sm .panhandle {
+        width: 12px;
+        height: 45px;
+        top: -2px;
+        left: 116px;
+        border-radius: 5px; }
+      .lyt-interface .pizzacontainer.typ-sm .pizzapan {
+        width: 115px;
+        height: 115px;
+        background-color: #aa4a05;
+        border-radius: 15px;
+        position: absolute;
+        box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.55);
+        -webkit-box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.55);
+        top: 12px;
+        left: 14px;
+        transform: rotate(90deg); }
+        .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow {
+          width: 105px;
+          height: 105px;
+          -webkit-box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.35);
+          box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.35);
+          top: 5px;
+          left: 5px; }
+          .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza {
+            width: 105px;
+            height: 105px; }
+            .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce {
+              width: 95px;
+              height: 95px;
+              top: 5px;
+              left: 5px; }
+              .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese {
+                width: 85px;
+                height: 85px;
+                top: 5px;
+                left: 5px;
+                /* PEPPERONI *********************************************************/
+                /* SAUSAGE *************************************************************/
+                /* MUSHROOM ***********************************************************/
+                /* OLIVES ***********************************************************/
+                /* BELL PEPPER ***********************************************************/ }
+                .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder {
+                  width: 80px;
+                  height: 80px;
+                  top: 5px;
+                  left: 5px; }
+                  .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder .pepperoni {
+                    width: 6px;
+                    height: 6px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder .pepperoni.p1 {
+                      top: 8px;
+                      left: 50px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder .pepperoni.p2 {
+                      top: 54px;
+                      left: 30px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder .pepperoni.p3 {
+                      top: 40px;
+                      left: 50px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder .pepperoni.p4 {
+                      top: 20px;
+                      left: 10px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder .pepperoni.p5 {
+                      top: 0;
+                      left: 30px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder .pepperoni.p6 {
+                      top: 50px;
+                      left: 0px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepperoni-holder .pepperoni.p7 {
+                      top: 30px;
+                      left: 70px; }
+                .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder {
+                  width: 80px;
+                  height: 80px;
+                  top: 5px;
+                  left: 5px; }
+                  .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage {
+                    width: 5px;
+                    height: 8px;
+                    border-radius: 40% 75% 75% 100%; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s1 {
+                      top: 20px;
+                      left: 30px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s2 {
+                      top: 40px;
+                      left: 10px;
+                      transform: rotate(270deg); }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s3 {
+                      top: 60px;
+                      left: 40px;
+                      transform: rotate(90deg); }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s4 {
+                      top: 3px;
+                      left: 15px;
+                      transform: rotate(110deg); }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s5 {
+                      top: 25px;
+                      left: 60px;
+                      transform: rotate(200deg); }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s6 {
+                      top: -2px;
+                      left: 45px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s7 {
+                      top: 62px;
+                      left: 12px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s8 {
+                      top: 30px;
+                      left: 0; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .sausage-holder .sausage.s10 {
+                      top: 50px;
+                      left: 50px; }
+                .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder {
+                  width: 80px;
+                  height: 80px; }
+                  .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom {
+                    width: 10px;
+                    height: 6px;
+                    border-radius: 70% 70% 0% 0%; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m1 {
+                      top: 20px;
+                      left: 140px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m2 {
+                      top: 50px;
+                      left: 10px;
+                      transform: rotate(270deg); }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m3 {
+                      top: 50px;
+                      left: 50px;
+                      transform: rotate(90deg); }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m4 {
+                      top: 25px;
+                      left: 10px;
+                      transform: rotate(110deg); }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m5 {
+                      top: 40px;
+                      left: 60px;
+                      transform: rotate(200deg); }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m6 {
+                      top: 15px;
+                      left: 33px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m7 {
+                      top: 5px;
+                      left: 20px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m8 {
+                      top: 64px;
+                      left: 28px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .mushroom-holder .mushroom.m10 {
+                      top: 4px;
+                      left: 54px; }
+                .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder {
+                  width: 80px;
+                  height: 80px;
+                  top: 10px;
+                  left: 10px; }
+                  .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive {
+                    width: 4px;
+                    height: 8px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o1 {
+                      top: 12px;
+                      left: 15px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o2 {
+                      top: 22px;
+                      left: 40px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o3 {
+                      top: 60px;
+                      left: 50px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o4 {
+                      top: 15px;
+                      left: 65px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o5 {
+                      top: 25px;
+                      left: 5px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o6 {
+                      top: 60px;
+                      left: 15px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o7 {
+                      top: 35px;
+                      left: 52px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o8 {
+                      top: 35px;
+                      left: 15px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o9 {
+                      top: 26px;
+                      left: 25px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .olive-holder .olive.o10 {
+                      top: -4px;
+                      left: 50px; }
+                .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder {
+                  width: 80px;
+                  height: 80px;
+                  top: 20px;
+                  left: 20px; }
+                  .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper {
+                    width: 2px;
+                    height: 8px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe1 {
+                      top: 20px;
+                      left: 25px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe2 {
+                      top: 0;
+                      left: 50px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe3 {
+                      top: 5px;
+                      left: -15px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe4 {
+                      top: 25px;
+                      left: 15px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe5 {
+                      top: -6px;
+                      left: 25px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe6 {
+                      top: 50px;
+                      left: 15px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe7 {
+                      top: 35px;
+                      left: 0px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe8 {
+                      top: -4px;
+                      left: 0px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe9 {
+                      top: 40px;
+                      left: 54px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe10 {
+                      top: 54px;
+                      left: 30px; }
+                    .lyt-interface .pizzacontainer.typ-sm .pizzapan .pizzashadow .pizza .tomatosauce .cheese .pepper-holder .pepper.pe11 {
+                      top: 20px;
+                      left: 50px; }
+  .lyt-interface .pizza-desc {
+    float: left;
+    padding: 0 10px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    width: calc(100% - 140px); }
+    .lyt-interface .pizza-desc .pizza-name {
+      font-size: 16px;
+      color: #444;
+      font-weight: 600;
+      margin-bottom: 6px; }
+    .lyt-interface .pizza-desc .ingredients {
+      font-size: 12px;
+      color: #777;
+      font-weight: 500;
+      margin: 6px 0;
+      display: block;
+      line-height: 15px; }
+    .lyt-interface .pizza-desc .price {
+      font-size: 14px;
+      color: #b32832;
+      font-weight: 600;
+      margin: 10px 0; }
+  .lyt-interface .spin {
+    animation: spin linear infinite 3s; }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .lyt-interface .deactive {
+    opacity: 0;
+    visibility: hidden; }
+  .lyt-interface .pizza-list {
+    padding: 0 15px; }
+    .lyt-interface .pizza-list > li {
+      float: left;
+      width: 100%;
+      position: relative;
+      margin-bottom: 10px;
+      padding-right: 10px;
+      box-sizing: border-box; }
+      .lyt-interface .pizza-list > li input {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden; }
+        .lyt-interface .pizza-list > li input:not(old):checked + label .icon-checkbox {
+          border: 1px solid #004b7b;
+          color: #004b7b;
+          font-size: 12px;
+          background: #004b7b; }
+          .lyt-interface .pizza-list > li input:not(old):checked + label .icon-checkbox:after {
+            content: '\2713';
+            color: #fff;
+            position: absolute;
+            font-size: 12px;
+            left: 3px;
+            top: 1px; }
+      .lyt-interface .pizza-list > li .form-label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        -webkit-box-shadow: 0px 0px 10px -2px #c2c2c2;
+        -moz-box-shadow: 0px 0px 10px -2px #c2c2c2;
+        box-shadow: 0px 0px 10px -2px #c2c2c2; }
+        .lyt-interface .pizza-list > li .form-label .icon-checkbox {
+          height: 16px;
+          width: 16px;
+          background-color: #fff;
+          border: 1px solid #004b7b;
+          border-radius: 2px;
+          position: absolute;
+          top: 50%;
+          right: -8px;
+          width: 16px;
+          height: 16px;
+          padding: 0;
+          transform: translateY(-50%);
+          cursor: pointer; }
+  .lyt-interface .pepperoni-holder {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+    .lyt-interface .pepperoni-holder .pepperoni {
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      background-color: #b31212;
+      position: absolute;
+      display: block; }
+      .lyt-interface .pepperoni-holder .pepperoni.p1 {
+        top: 80px;
+        left: 150px; }
+      .lyt-interface .pepperoni-holder .pepperoni.p2 {
+        top: 140px;
+        left: 30px; }
+      .lyt-interface .pepperoni-holder .pepperoni.p3 {
+        top: 100px;
+        left: 70px; }
+      .lyt-interface .pepperoni-holder .pepperoni.p4 {
+        top: 20px;
+        left: 10px; }
+      .lyt-interface .pepperoni-holder .pepperoni.p5 {
+        top: 0px;
+        left: 120px; }
+      .lyt-interface .pepperoni-holder .pepperoni.p6 {
+        top: 50px;
+        left: 100px; }
+      .lyt-interface .pepperoni-holder .pepperoni.p7 {
+        top: 160px;
+        left: 120px; }
+  .lyt-interface .sausage-holder {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+    .lyt-interface .sausage-holder .sausage {
+      width: 10px;
+      height: 15px;
+      border-radius: 40% 75% 75% 100%;
+      background-color: #934906;
+      position: absolute;
+      display: block; }
+      .lyt-interface .sausage-holder .sausage.s1 {
+        top: 170px;
+        left: 70px; }
+      .lyt-interface .sausage-holder .sausage.s2 {
+        top: 40px;
+        left: 160px;
+        transform: rotate(270deg); }
+      .lyt-interface .sausage-holder .sausage.s3 {
+        top: 100px;
+        left: 40px;
+        transform: rotate(90deg); }
+      .lyt-interface .sausage-holder .sausage.s4 {
+        top: 75px;
+        left: 105px;
+        transform: rotate(110deg); }
+      .lyt-interface .sausage-holder .sausage.s5 {
+        top: -15px;
+        left: 85px;
+        transform: rotate(200deg); }
+      .lyt-interface .sausage-holder .sausage.s6 {
+        top: 70px;
+        left: 65px;
+        transform: rotate(70deg); }
+      .lyt-interface .sausage-holder .sausage.s7 {
+        top: 105px;
+        left: 160px; }
+      .lyt-interface .sausage-holder .sausage.s8 {
+        top: 90px;
+        left: 0; }
+      .lyt-interface .sausage-holder .sausage.s9 {
+        top: 20px;
+        left: 50px; }
+      .lyt-interface .sausage-holder .sausage.s10 {
+        top: 130px;
+        left: 90px; }
+  .lyt-interface .mushroom-holder {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+    .lyt-interface .mushroom-holder .mushroom {
+      width: 15px;
+      height: 10px;
+      border-radius: 100% 100% 0% 0%;
+      background-color: #bd811c;
+      position: absolute;
+      display: block; }
+      .lyt-interface .mushroom-holder .mushroom.m1 {
+        top: 20px;
+        left: 140px; }
+      .lyt-interface .mushroom-holder .mushroom.m2 {
+        top: 70px;
+        left: 190px;
+        transform: rotate(270deg); }
+      .lyt-interface .mushroom-holder .mushroom.m3 {
+        top: 150px;
+        left: 60px;
+        transform: rotate(90deg); }
+      .lyt-interface .mushroom-holder .mushroom.m4 {
+        top: 20px;
+        left: 80px;
+        transform: rotate(110deg); }
+      .lyt-interface .mushroom-holder .mushroom.m5 {
+        top: 140px;
+        left: 160px;
+        transform: rotate(200deg); }
+      .lyt-interface .mushroom-holder .mushroom.m6 {
+        top: 175px;
+        left: 150px;
+        transform: rotate(70deg); }
+      .lyt-interface .mushroom-holder .mushroom.m7 {
+        top: 140px;
+        left: 105px; }
+      .lyt-interface .mushroom-holder .mushroom.m8 {
+        top: 120px;
+        left: 30px; }
+      .lyt-interface .mushroom-holder .mushroom.m9 {
+        top: 40px;
+        left: 30px; }
+      .lyt-interface .mushroom-holder .mushroom.m10 {
+        top: 200px;
+        left: 100px; }
+  .lyt-interface .olive-holder {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+    .lyt-interface .olive-holder .olive {
+      width: 8px;
+      height: 14px;
+      border-radius: 100%;
+      background-color: black;
+      position: absolute;
+      display: block; }
+      .lyt-interface .olive-holder .olive.o1 {
+        top: 0;
+        left: 100px; }
+      .lyt-interface .olive-holder .olive.o2 {
+        top: 70px;
+        left: 190px;
+        transform: rotate(270deg); }
+      .lyt-interface .olive-holder .olive.o3 {
+        top: 160px;
+        left: 90px;
+        transform: rotate(90deg); }
+      .lyt-interface .olive-holder .olive.o4 {
+        top: 50px;
+        left: 80px;
+        transform: rotate(110deg); }
+      .lyt-interface .olive-holder .olive.o5 {
+        top: 140px;
+        left: 140px;
+        transform: rotate(200deg); }
+      .lyt-interface .olive-holder .olive.o6 {
+        top: 115px;
+        left: 180px;
+        transform: rotate(70deg); }
+      .lyt-interface .olive-holder .olive.o7 {
+        top: 40px;
+        left: 45px; }
+      .lyt-interface .olive-holder .olive.o8 {
+        top: 150px;
+        left: 10px; }
+      .lyt-interface .olive-holder .olive.o9 {
+        top: 100px;
+        left: 100px; }
+      .lyt-interface .olive-holder .olive.o10 {
+        top: 110px;
+        left: 50px; }
+      .lyt-interface .olive-holder .olive.o11 {
+        top: 0;
+        left: 30px; }
+  .lyt-interface .pepper-holder {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+    .lyt-interface .pepper-holder .pepper {
+      width: 4px;
+      height: 15px;
+      border-radius: 100%;
+      background-color: #12be3d;
+      position: absolute;
+      display: block; }
+      .lyt-interface .pepper-holder .pepper.pe1 {
+        top: 20px;
+        left: 165px; }
+      .lyt-interface .pepper-holder .pepper.pe2 {
+        top: 70px;
+        left: 170px;
+        transform: rotate(270deg); }
+      .lyt-interface .pepper-holder .pepper.pe3 {
+        top: 165px;
+        left: 45px;
+        transform: rotate(90deg); }
+      .lyt-interface .pepper-holder .pepper.pe4 {
+        top: 25px;
+        left: 80px;
+        transform: rotate(110deg); }
+      .lyt-interface .pepper-holder .pepper.pe5 {
+        top: 100px;
+        left: 130px;
+        transform: rotate(200deg); }
+      .lyt-interface .pepper-holder .pepper.pe6 {
+        top: 100px;
+        left: 180px;
+        transform: rotate(70deg); }
+      .lyt-interface .pepper-holder .pepper.pe7 {
+        top: 35px;
+        left: 0px; }
+      .lyt-interface .pepper-holder .pepper.pe8 {
+        top: 110px;
+        left: 0px; }
+      .lyt-interface .pepper-holder .pepper.pe9 {
+        top: 40px;
+        left: 125px;
+        transform: rotate(70deg); }
+      .lyt-interface .pepper-holder .pepper.pe10 {
+        top: 60px;
+        left: 30px;
+        transform: rotate(170deg); }
+      .lyt-interface .pepper-holder .pepper.pe11 {
+        top: 80px;
+        left: 85px;
+        transform: rotate(220deg); }
+  .lyt-interface .corn-holder {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    transform: rotate(-95deg); }
+    .lyt-interface .corn-holder .corn {
+      width: 4px;
+      height: 15px;
+      border-radius: 100%;
+      background-color: rgba(255, 255, 0, 0.78);
+      position: absolute;
+      display: block; }
+      .lyt-interface .corn-holder .corn.cr1 {
+        top: 20px;
+        left: 165px; }
+      .lyt-interface .corn-holder .corn.cr2 {
+        top: 70px;
+        left: 170px;
+        transform: rotate(270deg); }
+      .lyt-interface .corn-holder .corn.cr3 {
+        top: 165px;
+        left: 45px;
+        transform: rotate(90deg); }
+      .lyt-interface .corn-holder .corn.cr4 {
+        top: 25px;
+        left: 80px;
+        transform: rotate(110deg); }
+      .lyt-interface .corn-holder .corn.cr5 {
+        top: 100px;
+        left: 130px;
+        transform: rotate(200deg); }
+      .lyt-interface .corn-holder .corn.cr6 {
+        top: 100px;
+        left: 180px;
+        transform: rotate(70deg); }
+      .lyt-interface .corn-holder .corn.cr7 {
+        top: 35px;
+        left: 0px; }
+      .lyt-interface .corn-holder .corn.cr8 {
+        top: 110px;
+        left: 0px; }
+      .lyt-interface .corn-holder .corn.cr9 {
+        top: 40px;
+        left: 125px;
+        transform: rotate(70deg); }
+      .lyt-interface .corn-holder .corn.cr10 {
+        top: 60px;
+        left: 30px;
+        transform: rotate(170deg); }
+      .lyt-interface .corn-holder .corn.cr11 {
+        top: 80px;
+        left: 85px;
+        transform: rotate(220deg); }
+  .lyt-interface .carrot-holder {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    transform: rotate(-190deg); }
+    .lyt-interface .carrot-holder .carrot {
+      width: 4px;
+      height: 20px;
+      border-radius: 100%;
+      background-color: #eb8921;
+      position: absolute;
+      display: block; }
+      .lyt-interface .carrot-holder .carrot.ca1 {
+        top: 0;
+        left: 100px; }
+      .lyt-interface .carrot-holder .carrot.ca2 {
+        top: 70px;
+        left: 190px;
+        transform: rotate(270deg); }
+      .lyt-interface .carrot-holder .carrot.ca3 {
+        top: 160px;
+        left: 90px;
+        transform: rotate(90deg); }
+      .lyt-interface .carrot-holder .carrot.ca4 {
+        top: 50px;
+        left: 80px;
+        transform: rotate(110deg); }
+      .lyt-interface .carrot-holder .carrot.ca5 {
+        top: 140px;
+        left: 140px;
+        transform: rotate(200deg); }
+      .lyt-interface .carrot-holder .carrot.ca6 {
+        top: 115px;
+        left: 180px;
+        transform: rotate(70deg); }
+      .lyt-interface .carrot-holder .carrot.ca7 {
+        top: 40px;
+        left: 45px; }
+      .lyt-interface .carrot-holder .carrot.ca8 {
+        top: 150px;
+        left: 10px; }
+      .lyt-interface .carrot-holder .carrot.ca9 {
+        top: 100px;
+        left: 100px; }
+      .lyt-interface .carrot-holder .carrot.ca10 {
+        top: 110px;
+        left: 50px; }
+      .lyt-interface .carrot-holder .carrot.ca11 {
+        top: 0;
+        left: 30px; }
+  .lyt-interface .capsicum-holder {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: -15px;
+    left: -4px;
+    transform: rotate(67deg); }
+    .lyt-interface .capsicum-holder .capsicum {
+      width: 15px;
+      height: 10px;
+      border-radius: 100% 100% 0% 0%;
+      background-color: #28843f;
+      position: absolute;
+      display: block; }
+      .lyt-interface .capsicum-holder .capsicum.cm1 {
+        top: 20px;
+        left: 140px; }
+      .lyt-interface .capsicum-holder .capsicum.cm2 {
+        top: 70px;
+        left: 190px;
+        transform: rotate(270deg); }
+      .lyt-interface .capsicum-holder .capsicum.cm3 {
+        top: 150px;
+        left: 60px;
+        transform: rotate(90deg); }
+      .lyt-interface .capsicum-holder .capsicum.cm4 {
+        top: 20px;
+        left: 80px;
+        transform: rotate(110deg); }
+      .lyt-interface .capsicum-holder .capsicum.cm5 {
+        top: 140px;
+        left: 160px;
+        transform: rotate(200deg); }
+      .lyt-interface .capsicum-holder .capsicum.cm6 {
+        top: 175px;
+        left: 150px;
+        transform: rotate(70deg); }
+      .lyt-interface .capsicum-holder .capsicum.cm7 {
+        top: 140px;
+        left: 105px; }
+  .lyt-interface .paneer-holder {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: 20px;
+    left: -28px;
+    transform: rotate(80deg); }
+    .lyt-interface .paneer-holder .paneer {
+      width: 12px;
+      height: 12px;
+      border-radius: 4px;
+      background-color: #fffce4;
+      position: absolute;
+      display: block; }
+      .lyt-interface .paneer-holder .paneer.pr1 {
+        top: 80px;
+        left: 150px; }
+      .lyt-interface .paneer-holder .paneer.pr2 {
+        top: 140px;
+        left: 30px; }
+      .lyt-interface .paneer-holder .paneer.pr3 {
+        top: 100px;
+        left: 70px; }
+      .lyt-interface .paneer-holder .paneer.pr4 {
+        top: 20px;
+        left: 10px; }
+      .lyt-interface .paneer-holder .paneer.pr5 {
+        top: 0px;
+        left: 120px; }
+      .lyt-interface .paneer-holder .paneer.pr6 {
+        top: 50px;
+        left: 100px; }
+      .lyt-interface .paneer-holder .paneer.pr7 {
+        top: 160px;
+        left: 120px; }
+  .lyt-interface .toggleui {
+    width: 260px;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 30px; }
+  .lyt-interface .card-container {
+    perspective: 100; }
+  .lyt-interface .card {
+    width: 100%;
+    height: 60px;
+    display: block;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0px 7px 15px 0px rgba(84, 84, 84, 0.78);
+    color: #004a80;
+    text-align: center;
+    line-height: 30px;
+    transform-style: preserve-3d;
+    transition: 1.0s ease; }
+  .lyt-interface .card h1 {
+    font-size: 1.6em; }
+  .lyt-interface .front,
+  .lyt-interface .back {
+    background-color: #547254;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; }
+  .lyt-interface .back {
+    transform: rotateY(180deg);
+    background-color: brown;
+    opacity: 0.6; }
+  .lyt-interface .flip {
+    transform: rotateY(180deg); }
+  .lyt-interface .radio-group,
+  .lyt-interface .chkbox-group,
+  .lyt-interface .listing-group {
+    margin: 0 auto;
+    width: 360px;
+    clear: both;
+    padding: 0 20px;
+    box-sizing: border-box; }
+    .lyt-interface .radio-group .radio-label,
+    .lyt-interface .radio-group .chkbox-label,
+    .lyt-interface .radio-group .list-item,
+    .lyt-interface .chkbox-group .radio-label,
+    .lyt-interface .chkbox-group .chkbox-label,
+    .lyt-interface .chkbox-group .list-item,
+    .lyt-interface .listing-group .radio-label,
+    .lyt-interface .listing-group .chkbox-label,
+    .lyt-interface .listing-group .list-item {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+      width: 100%; }
+      @media (max-width: 48em) {
+        .lyt-interface .radio-group .radio-label,
+        .lyt-interface .radio-group .chkbox-label,
+        .lyt-interface .radio-group .list-item,
+        .lyt-interface .chkbox-group .radio-label,
+        .lyt-interface .chkbox-group .chkbox-label,
+        .lyt-interface .chkbox-group .list-item,
+        .lyt-interface .listing-group .radio-label,
+        .lyt-interface .listing-group .chkbox-label,
+        .lyt-interface .listing-group .list-item {
+          display: block;
+          margin: 15px 0; } }
+      .lyt-interface .radio-group .radio-label input,
+      .lyt-interface .radio-group .chkbox-label input,
+      .lyt-interface .radio-group .list-item input,
+      .lyt-interface .chkbox-group .radio-label input,
+      .lyt-interface .chkbox-group .chkbox-label input,
+      .lyt-interface .chkbox-group .list-item input,
+      .lyt-interface .listing-group .radio-label input,
+      .lyt-interface .listing-group .chkbox-label input,
+      .lyt-interface .listing-group .list-item input {
+        opacity: 0;
+        position: absolute; }
+      .lyt-interface .radio-group .radio-label .inner-label,
+      .lyt-interface .radio-group .chkbox-label .inner-label,
+      .lyt-interface .radio-group .list-item .inner-label,
+      .lyt-interface .chkbox-group .radio-label .inner-label,
+      .lyt-interface .chkbox-group .chkbox-label .inner-label,
+      .lyt-interface .chkbox-group .list-item .inner-label,
+      .lyt-interface .listing-group .radio-label .inner-label,
+      .lyt-interface .listing-group .chkbox-label .inner-label,
+      .lyt-interface .listing-group .list-item .inner-label {
+        position: relative;
+        display: inline-block;
+        padding-left: 40px;
+        color: #004b7b;
+        font-size: 13px; }
+        .lyt-interface .radio-group .radio-label .inner-label:before,
+        .lyt-interface .radio-group .chkbox-label .inner-label:before,
+        .lyt-interface .radio-group .list-item .inner-label:before,
+        .lyt-interface .chkbox-group .radio-label .inner-label:before,
+        .lyt-interface .chkbox-group .chkbox-label .inner-label:before,
+        .lyt-interface .chkbox-group .list-item .inner-label:before,
+        .lyt-interface .listing-group .radio-label .inner-label:before,
+        .lyt-interface .listing-group .chkbox-label .inner-label:before,
+        .lyt-interface .listing-group .list-item .inner-label:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          border-bottom: 1px dashed rgba(168, 73, 6, 0.25);
+          width: 30px;
+          transition: border-bottom 0.5s ease; }
+      .lyt-interface .radio-group .radio-label .amount,
+      .lyt-interface .radio-group .chkbox-label .amount,
+      .lyt-interface .radio-group .list-item .amount,
+      .lyt-interface .chkbox-group .radio-label .amount,
+      .lyt-interface .chkbox-group .chkbox-label .amount,
+      .lyt-interface .chkbox-group .list-item .amount,
+      .lyt-interface .listing-group .radio-label .amount,
+      .lyt-interface .listing-group .chkbox-label .amount,
+      .lyt-interface .listing-group .list-item .amount {
+        float: right;
+        color: #555;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px; }
+      .lyt-interface .radio-group .radio-label input:focus ~ .inner-label:before,
+      .lyt-interface .radio-group .chkbox-label input:focus ~ .inner-label:before,
+      .lyt-interface .radio-group .list-item input:focus ~ .inner-label:before,
+      .lyt-interface .chkbox-group .radio-label input:focus ~ .inner-label:before,
+      .lyt-interface .chkbox-group .chkbox-label input:focus ~ .inner-label:before,
+      .lyt-interface .chkbox-group .list-item input:focus ~ .inner-label:before,
+      .lyt-interface .listing-group .radio-label input:focus ~ .inner-label:before,
+      .lyt-interface .listing-group .chkbox-label input:focus ~ .inner-label:before,
+      .lyt-interface .listing-group .list-item input:focus ~ .inner-label:before {
+        border-bottom: 1px solid rgba(77, 38, 38, 0.75); }
+      .lyt-interface .radio-group .radio-label input:checked ~ .inner-label:after,
+      .lyt-interface .radio-group .chkbox-label input:checked ~ .inner-label:after,
+      .lyt-interface .radio-group .list-item input:checked ~ .inner-label:after,
+      .lyt-interface .chkbox-group .radio-label input:checked ~ .inner-label:after,
+      .lyt-interface .chkbox-group .chkbox-label input:checked ~ .inner-label:after,
+      .lyt-interface .chkbox-group .list-item input:checked ~ .inner-label:after,
+      .lyt-interface .listing-group .radio-label input:checked ~ .inner-label:after,
+      .lyt-interface .listing-group .chkbox-label input:checked ~ .inner-label:after,
+      .lyt-interface .listing-group .list-item input:checked ~ .inner-label:after {
+        content: '\2713';
+        color: #aa4a05;
+        position: absolute;
+        font-size: 12px;
+        left: 12px;
+        top: 1px; }
+      .lyt-interface .radio-group .radio-label input:checked ~ .inner-label + .amount,
+      .lyt-interface .radio-group .chkbox-label input:checked ~ .inner-label + .amount,
+      .lyt-interface .radio-group .list-item input:checked ~ .inner-label + .amount,
+      .lyt-interface .chkbox-group .radio-label input:checked ~ .inner-label + .amount,
+      .lyt-interface .chkbox-group .chkbox-label input:checked ~ .inner-label + .amount,
+      .lyt-interface .chkbox-group .list-item input:checked ~ .inner-label + .amount,
+      .lyt-interface .listing-group .radio-label input:checked ~ .inner-label + .amount,
+      .lyt-interface .listing-group .chkbox-label input:checked ~ .inner-label + .amount,
+      .lyt-interface .listing-group .list-item input:checked ~ .inner-label + .amount {
+        font-weight: 600; }
+  .lyt-interface .listing-group {
+    margin: 20px auto;
+    width: 250px;
+    clear: both;
+    padding: 0 20px;
+    float: right; }
+    .lyt-interface .listing-group .list-item {
+      position: relative;
+      display: inline-block;
+      padding-left: 0;
+      color: #004b7b;
+      font-size: 14px;
+      margin: 6px 0; }
+      .lyt-interface .listing-group .list-item .lst-txt {
+        color: #004b7b;
+        font-size: 13px;
+        width: 100px;
+        text-align: right;
+        display: inline-block; }
+      .lyt-interface .listing-group .list-item .amt {
+        color: #b31212;
+        width: 85px;
+        display: inline-block;
+        font-size: 12px;
+        text-align: right; }
+      .lyt-interface .listing-group .list-item.last {
+        border-top: 1px solid #ddd;
+        padding-top: 15px; }
+        .lyt-interface .listing-group .list-item.last .lst-txt {
+          font-size: 14px;
+          font-weight: 600; }
+        .lyt-interface .listing-group .list-item.last .amt {
+          font-size: 14px;
+          font-weight: 600; }
+  .lyt-interface .deli-img {
+    background: transparent url("../img/courier.svg") no-repeat 0 0;
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 60px auto 0; }
+  .lyt-interface .msg {
+    color: #555;
+    font-size: 28px;
+    text-align: center;
+    line-height: 36px;
+    padding: 0 20px;
+    margin-top: 60px; }
+
+/*# sourceMappingURL=custom.css.map */

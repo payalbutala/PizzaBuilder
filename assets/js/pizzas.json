@@ -1,0 +1,37 @@
+[{
+    "id": 0,
+    "name": "Deluxe Veggie",
+    "price": 200,
+    "ingredients": ["Red Peppers", "Garlic", "Olives", "Tomato", "Mushroom"],
+    "size": 8,
+    "crust": "Normal",
+    "extraToppings": [],
+    "totalCost": 0
+}, {
+    "id": 1,
+    "name": "Farmhouse",
+    "price": 240,
+    "ingredients": ["Red Peppers", "Olives", "Tomato", "Mushroom"],
+    "size": 8,
+    "crust": "Normal",
+    "extraToppings": [],
+    "totalCost": 0
+}, {
+    "id": 2,
+    "name": "Mexican Green Wave",
+    "price": 220,
+    "ingredients": ["Red Peppers", "Garlic", "Tomato", "Mushroom"],
+    "size": 8,
+    "crust": "Normal",
+    "extraToppings": [],
+    "totalCost": 0
+}, {
+    "id": 3,
+    "name": "Margherita",
+    "price": 180,
+    "ingredients": ["Red Peppers"],
+    "size": 8,
+    "crust": "Normal",
+    "extraToppings": [],
+    "totalCost": 0
+}]

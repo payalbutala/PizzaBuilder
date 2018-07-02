@@ -1,0 +1,48 @@
+/* element.scss */
+
+body {
+    background: $clr-root;
+    font-size: 15px;
+    color: $clr-base;
+    font-family: sans-serif;
+    font-weight: 400;
+    // overflow: hidden;
+}
+
+p {
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    color: $clr-base;
+    text-decoration: none;
+    outline: none !important;
+}
+
+button {
+    &:focus,
+    &:active {
+        outline: none !important;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    left: -99999px;
+    position: absolute;
+    top: -99999px;
+}
